@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<chanel>
+	<item>
+		<title>Sustainable tourism</title>
+		<link>http://marijarahman513.cu.cc/susTourism</link>
+		<author>Marija Rahman</author>
+		<date>
+			<day>1</day>
+			<month>2</month>
+			<year>2015</year>
+		</date>	
+		<description>Blog posts about positive impact of the environment, society and economy</description>
+	</item>
+	
+	<item>
+		<title>Green traveler</title>
+		<link>http://marijarahman513.cu.cc/green.html</link>
+		<author>Marija Rahman</author>
+		<date>
+			<day>10</day>
+			<month>3</month>
+			<year>2015</year>
+		</date>	
+		<description>Tip about eco-routes and ecology</description>
+	</item>
+	
+	<item>
+		<title>Serbia</title>
+		<link>http://marijarahman513.cu.cc/serbia.html</link>
+		<author>Marija Rahman</author>
+		<date>
+			<day>12</day>
+			<month>3</month>
+			<year>2015</year>
+		</date>	
+		<description>Destinations in Serbia</description>
+	</item>
+		<item>
+		<title>Greece</title>
+		<link>http://marijarahman513.cu.cc/destinations.html</link>
+		<author>Marija Rahman</author>
+		<date>
+			<day>14</day>
+			<month>3</month>
+			<year>2015</year>
+		</date>	
+		<description>Destinations in Greece</description>
+	</item>
+</chanel>
+</rss>

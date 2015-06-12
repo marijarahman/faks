@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="posts.xsl"?>
+	<blog>
+		<post>
+			<heading>Lorem Ipsum</heading>
+			<date>
+				<day>16</day>
+				<month>3</month>
+				<year>2015</year>
+			</date>
+			<text>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum ultrices tincidunt. Morbi egestas urna arcu. Vivamus egestas ligula ut lorem blandit vestibulum. Vestibulum turpis urna, molestie at sollicitudin eu, viverra ac eros. Nulla facilisi. Vivamus fringilla ut ante ut venenatis. Donec ut risus dignissim, fringilla nulla et, maximus nulla. Nulla sapien sapien, pharetra vitae sem eu, egestas lobortis diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed molestie venenatis libero at pretium. Ut non ultrices ante, et interdum magna. In efficitur malesuada quam at scelerisque. Praesent dolor lorem, gravida consequat tempor at, vestibulum a nunc. Vivamus in finibus arcu. Morbi ligula libero, iaculis eget ante vitae, consequat ornare magna. Donec scelerisque ac ipsum a sollicitudin.
+
+				Sed at venenatis felis, ac vulputate odio. Vivamus ac auctor ligula, non lobortis lorem. Nunc faucibus ornare pellentesque. Nullam a tellus imperdiet, feugiat enim vel, luctus nisl. Quisque at enim at lorem volutpat sodales. Sed sollicitudin lacinia sapien nec lacinia. Donec dignissim nisl sit amet sapien congue porttitor nec eget orci. Mauris non placerat lectus, sed porta ante. Fusce risus velit, varius a massa sit amet, lacinia mollis ex. Cras at risus id ligula aliquam volutpat vitae rhoncus lorem. Nam gravida mattis vestibulum. In dignissim metus metus, quis finibus risus eleifend id. Ut venenatis eleifend iaculis.
+
+				Nullam sed condimentum ligula. Curabitur sit amet congue sem. Proin euismod ante sit amet est faucibus, lobortis aliquet nulla euismod. Vivamus vulputate tellus aliquet, fermentum lectus vitae, mollis quam. Proin cursus, ante sed dignissim fermentum, nisi risus mattis velit, sit amet euismod lectus lacus volutpat arcu. Nulla lacinia luctus neque sed faucibus. Etiam diam massa, sagittis sed justo nec, mollis luctus mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec faucibus ipsum a elit dictum laoreet. Maecenas commodo mauris neque, a cursus purus efficitur sit amet. Curabitur at mi sed ante egestas porttitor nec quis lacus. Suspendisse potenti. Donec vestibulum ultrices libero a volutpat. Nunc dignissim erat vitae magna suscipit sagittis. Pellentesque accumsan euismod varius. Proin ut ultricies nisi.
+			</text>
+		</post>
+				<post>
+			<heading>Lorem Ipsum</heading>
+			<date>
+				<day>17</day>
+				<month>3</month>
+				<year>2015</year>
+			</date>
+			<text>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet nisi et est faucibus aliquet sed eu nisi. Mauris vehicula nisl sed erat mollis tempor. Sed a cursus neque. Pellentesque mollis blandit augue quis imperdiet. In facilisis enim non metus dapibus, vitae condimentum mauris pharetra. In hac habitasse platea dictumst. Nam vel neque tempor, tempus risus at, euismod nulla.
+
+				Mauris nunc erat, venenatis sit amet ultrices quis, porttitor a nisi. Vivamus elementum sapien non facilisis luctus. Cras non tincidunt sem. Aenean dignissim purus ac vulputate aliquam. Sed eget finibus ipsum, non interdum tortor. Morbi auctor pretium porttitor. Aenean interdum iaculis sem eu ullamcorper. Ut vulputate fringilla rutrum. Fusce mollis tincidunt est, et feugiat nisi condimentum dignissim. Duis vestibulum est ut gravida convallis. Vivamus nec pulvinar nisl. Fusce eu mi venenatis, tempor justo a, semper nibh. Vestibulum consectetur, dolor vitae iaculis malesuada, orci purus faucibus est, sit amet tincidunt lectus ex ut ante.
+
+				Praesent vel fringilla justo. Vivamus dapibus, neque quis efficitur mollis, massa purus dictum purus, ut placerat orci lectus ut erat. Praesent id cursus velit, ut dignissim nulla. Ut porta pretium sagittis. Maecenas et risus tempus, ultricies velit quis, auctor augue. Sed suscipit blandit massa, in efficitur mi sagittis vel. Ut non sollicitudin ipsum. Nulla venenatis ante a ex posuere, eu tincidunt felis consequat. Sed vitae mauris laoreet, vehicula risus et, placerat mauris.
+			</text>
+		</post>
+	</blog>
