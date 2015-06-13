@@ -17,7 +17,7 @@
 		<meta name="author" content="Marija Rahman">
 	</head>
 	<body>
-		<?php include 'header_ulogovan.php'; ?>
+		 <?php include 'ulogovan_header.php'; ?>  
 		<div id="containerIndex">
 			
 			<div id="central">

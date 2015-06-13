@@ -1,7 +1,7 @@
 <?php
 	// dynamic ddl menu
 	try {
-		$pdo = new PDO("mysql:host=localhost;dbname=baza1", 'root', '');
+		$pdo = new PDO("mysql:host=localhost;dbname=baza1", 'root', 'password');
 	}
 	catch(PDOException $e){
 		echo $e->getMessage();

@@ -36,6 +36,36 @@ include 'connect.php';
 		}
 	}
 ?>
+<?php 
+	if (isset($_REQUEST['btnRegister'])) {
+		$email = trim($_REQUEST['regEmail']);
+		$user = trim($_REQUEST['regUser']);
+		$pass = md5(trim($_REQUEST['regPass']));
+
+		$query = "SELECT * FROM korisnici WHERE korisnicko_ime = '$user'";
+		$res = mysql_query($query, $k);
+		if (mysql_num_rows($res) == 0) {
+			$sql = "INSERT INTO korisnici VALUES('', '$user', '$pass', '$email')";
+			$r = mysql_query($sql);
+			if ($r) {
+				echo "Account created";
+			}
+			else {
+				$greske[] = "Account not created!";
+			}
+			$uloga = "SELECT id_korisnik FROM korisnici WHERE korisnicko_ime = '$user'";
+			$id = mysql_query($uloga, $k);
+			$row = mysql_fetch_assoc($id);
+			$a = $row['id_korisnik'];
+			$sql = "INSERT INTO korisnik_uloga VALUES(1, $a)";
+			$r = mysql_query($sql);
+			
+		}
+		else {
+			$greske[] = "Already exists!";
+		}
+	}
+ ?>
 <?php include 'dropdown.inc'; ?>
 <!doctype html>
 <html>
@@ -84,21 +114,18 @@ include 'connect.php';
 			<form class="email-signup">
 				
 				<div class="u-form-group">
-					<input type="email" placeholder="Email" id="signUpEmail"/>
+					<input type="email" placeholder="Email" id="signUpEmail" name="regEmail"/>
 					<div id="errorUpEmail"></div>
 				</div>
 				<div class="u-form-group">
-					<input type="text" placeholder="Username" id="signUpUser"/>
+					<input type="text" placeholder="Username" id="signUpUser" name="regUser"/>
 					<div id="errorUpUser"></div>
 				</div>
 				<div class="u-form-group">
-					<input type="password" placeholder="Password" id="signUpPass" />
+					<input type="password" placeholder="Password" id="signUpPass" name="regPass"/>
 					<div id="errorUpPass"></div>
 				</div>
-				<div class="u-form-group">
-					<input type="password" placeholder="Confirm Password" id="signUpPass2"/>
-					<div id="errorUpPass2"></div>
-				</div>
+				
 				<div class="u-form-group">
 					<button onclick="signUp();" name="btnRegister">Sign Up</button>
 				</div>

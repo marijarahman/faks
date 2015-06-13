@@ -8,7 +8,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,400,200,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
-		<title>Eco Tourism | Home</title>
+		<title>Eco Tourism | Contact </title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Blog o eko turizmu">
 		<meta name="keywords" content="ecology,greece,serbia,trip,tourism,awarness,destinations,enviromental,eco"> <!-- Optimizovati keywords -->
