@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Jun 13, 2015 at 01:46 PM
+-- Generation Time: Jun 14, 2015 at 06:01 PM
 -- Server version: 5.6.24-0ubuntu2
 -- PHP Version: 5.6.4-4ubuntu6
 
@@ -23,6 +23,52 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin_menu`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_menu` (
+`id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `href` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `admin_menu`
+--
+
+INSERT INTO `admin_menu` (`id`, `name`, `href`) VALUES
+(1, 'Home', 'index.php'),
+(2, 'About', 'about.php'),
+(3, 'Contact', 'contact.php'),
+(4, 'Think Green', ''),
+(5, 'Sign in / Sign up', 'signup.php'),
+(6, 'Admin panel', 'dash.php'),
+(7, 'Log out', 'logout.php');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_sub_menu`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_sub_menu` (
+`id` int(11) NOT NULL,
+  `sub_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `href` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cat_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `admin_sub_menu`
+--
+
+INSERT INTO `admin_sub_menu` (`id`, `sub_name`, `href`, `cat_id`) VALUES
+(1, 'Sustainable tourism', 'susTourism.php', 4),
+(2, 'Green traveler', 'green.php', 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `korisnici`
 --
 
@@ -31,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `korisnici` (
   `korisnicko_ime` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `lozinka` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(20) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `korisnici`
@@ -40,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `korisnici` (
 INSERT INTO `korisnici` (`id_korisnik`, `korisnicko_ime`, `lozinka`, `email`) VALUES
 (1, 'pera', 'd8795f0d07280328f80e59b1e8414c49', 'pera@gmail.com'),
 (2, 'mika', '07af613eea059030daaed3bde1fd1ce7', 'mika@gmail.com'),
-(21, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test.com');
+(23, 'maja', '0cc45c9b2fc35c72a5fae9a682d630e3', 'maja@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -62,7 +108,56 @@ INSERT INTO `korisnik_uloga` (`id_uloga`, `id_korisnik`) VALUES
 (2, 1),
 (0, 18),
 (1, 19),
-(1, 21);
+(1, 21),
+(2, 22),
+(1, 23),
+(0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_menu`
+--
+
+CREATE TABLE IF NOT EXISTS `member_menu` (
+`id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `href` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `member_menu`
+--
+
+INSERT INTO `member_menu` (`id`, `name`, `href`) VALUES
+(1, 'Home', 'index.php'),
+(2, 'About', 'about.php'),
+(3, 'Contact', 'contact.php'),
+(4, 'Think Green', ''),
+(5, 'Sign in / Sign up', 'signup.php'),
+(6, 'Profile', 'profile.php'),
+(7, 'Log out', 'logout.php');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_sub_menu`
+--
+
+CREATE TABLE IF NOT EXISTS `member_sub_menu` (
+`id` int(11) NOT NULL,
+  `sub_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `href` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cat_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `member_sub_menu`
+--
+
+INSERT INTO `member_sub_menu` (`id`, `sub_name`, `href`, `cat_id`) VALUES
+(1, 'Sustainable tourism', 'susTourism.php', 4),
+(2, 'Green traveler', 'green.php', 4);
 
 -- --------------------------------------------------------
 
@@ -132,10 +227,34 @@ INSERT INTO `uloge` (`id_uloga`, `naziv_uloge`) VALUES
 --
 
 --
+-- Indexes for table `admin_menu`
+--
+ALTER TABLE `admin_menu`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `admin_sub_menu`
+--
+ALTER TABLE `admin_sub_menu`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `korisnici`
 --
 ALTER TABLE `korisnici`
  ADD PRIMARY KEY (`id_korisnik`);
+
+--
+-- Indexes for table `member_menu`
+--
+ALTER TABLE `member_menu`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `member_sub_menu`
+--
+ALTER TABLE `member_sub_menu`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `menu`
@@ -160,10 +279,30 @@ ALTER TABLE `uloge`
 --
 
 --
+-- AUTO_INCREMENT for table `admin_menu`
+--
+ALTER TABLE `admin_menu`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `admin_sub_menu`
+--
+ALTER TABLE `admin_sub_menu`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `korisnici`
 --
 ALTER TABLE `korisnici`
-MODIFY `id_korisnik` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+MODIFY `id_korisnik` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT for table `member_menu`
+--
+ALTER TABLE `member_menu`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `member_sub_menu`
+--
+ALTER TABLE `member_sub_menu`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `menu`
 --
