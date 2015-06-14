@@ -26,11 +26,11 @@ include 'connect.php';
 			setcookie($korisnicko_ime, $ime_prezime, time() + (86400*30), "/");
 			switch ($naziv_uloge) {
 				case 'admin':
-					header("Location:ulogovan.php");
+					header("Location:admin.php");
 					break;
 				
 				case 'student':
-					header("Location:about.php");
+					header("Location:member.php");
 					break;
 			}
 		}
@@ -57,7 +57,7 @@ include 'connect.php';
 			$id = mysql_query($uloga, $k);
 			$row = mysql_fetch_assoc($id);
 			$a = $row['id_korisnik'];
-			$sql = "INSERT INTO korisnik_uloga VALUES(1, $a)";
+			$sql = "INSERT INTO korisnik_uloga VALUES(2, $a)";
 			$r = mysql_query($sql);
 			
 		}

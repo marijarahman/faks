@@ -164,37 +164,6 @@ if (func){
 
 }
 
-  var loginLog=false;
-  var user, pass;
-  function signIn(){
-  var userLogIn=document.getElementById("tbEmail").value;
-  var passLogIn=document.getElementById("tbPass").value;
-  if(document.cookie=="")alert("There are no registred users");
-  else {
-  var cookie = document.cookie.split("; ");
-  var cookie = new Array();
-  for (var i = 0; i < cookie.length; i++){
-  cookie=c[i].split(";");
-  user=cookie[0].split("=")[0];
-  pass=cookie[0].split("=")[1];
-  if(user==userLogIn) {
-  if(pass==passLogIn){
-  alert("Successful login!");
-  document.getElementById("logSection").style.display = 'none';
-  document.getElementById("logged").style.display = 'block';
-  var d=new Date();
-  d.setMonth(d.getMonth()+6);
-  document.cookie="LogCheck=true;expires="+d.toGMTString()+";";
-  loginLog=false;
-  break;}
-  alert("password los za uneti mail");
-  }
-  else loginLog=true;
-  
-  }
-  if(loginLog) alert("ne postoji korisnik");
-  }
-}
 
 function create(){
   if(window.XMLHttpRequest){
@@ -209,23 +178,7 @@ function create(){
   search(xmlDoc);
 }
 
-function search(xmlDoc){
-  var searchVal = document.getElementById("searchBox").value;
-  
-  var allItems = xmlDoc.getElementsByTagName("post");
-  for (i = 0; i < allItems.length; i++) {
-    var head = allItems[i].getElementsByTagName("heading")[0].childNodes[0].nodeValue;
-   
-    var postBody = allItems[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
 
-    if(searchVal.toLowerCase().trim() == head.toLowerCase().trim()){
-      var text = "<span> <b>" + head + "</b> </span> <br> <span> <b>" + postBody + "</b> </span>";
-    }
-   
-
-  }
- document.getElementById("rezultatPretraga").innerHTML = text;
-}
 
   function vote() {
   var d = new Date();

@@ -1,4 +1,4 @@
-
+<?php @session_start(); ?>
 <?php include 'dropdown.inc'; ?>
 <!doctype html>
 <html>
@@ -17,7 +17,6 @@
 		<meta name="author" content="Marija Rahman">
 	</head>
 	<body>
-
 		<?php include 'header.php'; ?>
 		<div id="containerIndex">
 			

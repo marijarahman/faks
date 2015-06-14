@@ -1,5 +1,9 @@
-
-<?php include 'dropdown.inc'; ?>
+<?php @session_start(); ?>
+<?php 
+include 'functions.php';
+admin_protect();
+include 'dropdown.inc'; 
+?>
 <!doctype html>
 <html>
 	<head>
@@ -17,7 +21,6 @@
 		<meta name="author" content="Marija Rahman">
 	</head>
 	<body>
-
 		<?php include 'header.php'; ?>
 		<div id="containerIndex">
 			
