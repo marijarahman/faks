@@ -6,9 +6,7 @@ function admin_protect() {
 		echo $_SESSION['idU'];
 		exit();
 	}
-	else {
-		echo "Ovo je else deo";
-	}
+	
 }
 
 ?>

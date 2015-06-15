@@ -3,7 +3,7 @@
 		<h1>
 		<?php
 			include 'connect.php';
-			$upit = 'SELECT title FROM post WHERE id = 1';
+			$upit = 'SELECT title FROM post WHERE id = 2';
 			$rez = mysql_query($upit, $k);
 			while ($r = mysql_fetch_array($rez)) {
 				echo $r['title'];
@@ -13,7 +13,7 @@
 		<h2>
 		<?php
 			include 'connect.php';
-			$upit = 'SELECT date FROM post WHERE id = 1';
+			$upit = 'SELECT date FROM post WHERE id = 2';
 			$rez = mysql_query($upit, $k);
 			while ($r = mysql_fetch_array($rez)) {
 				echo $r['date'];
@@ -28,7 +28,7 @@
 		<p>
 			<?php
 					include 'connect.php';
-					$upit = 'SELECT body FROM post WHERE id = 1';
+					$upit = 'SELECT body FROM post WHERE id = 2';
 					$rez = mysql_query($upit, $k);
 					while ($r = mysql_fetch_array($rez)) {
 						$skraceno = substr($r['body'], 0,400);
@@ -38,7 +38,7 @@
 		</p>
 	</div>
 	<div class="blogButton">
-		<a href="blogPage.php"><input type="button" class="blogBtn" name="blogBtn" value="read full article"></a>
+		<a href="blogPage2.php"><input type="button" class="blogBtn" name="blogBtn" value="read full article"></a>
 	</div>
 	<div id="blogSocial">
 		<div class="social">

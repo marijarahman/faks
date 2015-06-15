@@ -3,8 +3,10 @@
 <!doctype html>
 <html>
 	<head>
-		<script src="output.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
+		<script src="output.min.js" type="text/javascript" charset="utf-8"></script>		
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="font-awesome-4.3.0/font-awesome-4.3.0/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,400,200,300' rel='stylesheet' type='text/css'>

@@ -1,7 +1,6 @@
 <?php @session_start();
 $rola = $_SESSION['idU'];
 ?>
-
 <div id="header">
 	<a href="index.php"><img src="img/logo-copy.png" alt="logo"></a>
 	<div id="menu">
@@ -97,12 +96,17 @@ $rola = $_SESSION['idU'];
 	}
 	?>
 </li>
+
 <?php
 }
 break;
 }
 ?>
+<li><input type="search" placeholder="Search" id="search" onkeyup="getResult(this.value);"></li>
+
 </ul>
 </div>
 <div class="clear"></div>
 </div>
+<div id="search-result"></div>
+	

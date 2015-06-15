@@ -23,7 +23,7 @@
 				<h1>
 					<?php 
 						include 'connect.php';
-						$upit = 'SELECT title FROM post WHERE id = 1';
+						$upit = 'SELECT title FROM post WHERE id = 2';
 						$rez = mysql_query($upit, $k);
 						while ($r = mysql_fetch_array($rez)) {
 							echo $r['title'];
@@ -33,7 +33,7 @@
 				<h2>
 					<?php 
 						include 'connect.php';
-						$upit = 'SELECT date FROM post WHERE id = 1';
+						$upit = 'SELECT date FROM post WHERE id = 2';
 						$rez = mysql_query($upit, $k);
 						while ($r = mysql_fetch_array($rez)) {
 							echo $r['date'];
@@ -48,7 +48,7 @@
 				<p>
 					<?php 
 						include 'connect.php';
-						$upit = 'SELECT body FROM post WHERE id = 1';
+						$upit = 'SELECT body FROM post WHERE id = 2';
 						$rez = mysql_query($upit, $k);
 						while ($r = mysql_fetch_array($rez)) {
 							echo $r['body'];
@@ -56,7 +56,7 @@
 					 ?>
 				</p>
 				<div class="blogButton">
-					<a href="susTourism.php"><input type="button" class="blogBtn" name="blogBtn" value="go back"></a>
+					<a href="green.php"><input type="button" class="blogBtn" name="blogBtn" value="go back"></a>
 				</div>
 			</div>
 			

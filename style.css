@@ -708,7 +708,7 @@ p {
   font-size:15px;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
- 
+  margin-bottom: 3.125em;
 }
 
 .blogBtn:hover {
@@ -833,4 +833,32 @@ p {
 #surveyForm {
   padding: 30px;
   font-family: 'Raleway', sans-serif;
+}
+
+#search-result {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+.search-result__heading {
+  font-size: 1.8em;
+  color: #00B16A;
+}
+
+.search-result__date {
+    font-size: 1em;
+  color: #434a54;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: 11px;
+}
+
+.search-result__text {
+  text-align: justify;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 15px;
+  line-height: 1.5em;
+  color: #434a54;
 }

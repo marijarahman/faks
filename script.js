@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	$("#nav li ul").css({
-		display: "none"
-	});
-	$("#menu li").hover(function() {
+  $("#nav li ul").css({
+    display: "none"
+  });
+  $("#menu li").hover(function() {
     $(this)
       .find("ul")
       .stop(true, true)
@@ -221,4 +221,29 @@ function create(){
   }
 function reset() {
   document.getElementById("searchBox").value = "";
+}
+
+
+
+/*===================================*\
+
+  LIVE SEARCH 
+
+\*===================================*/
+
+
+
+function getResult(value) {
+
+  $('#search').on('blur', function(){
+    var search = $('#search').val();
+    if ($.trim(search) != '') {
+      $.post('ajax/search.php', {search: value}, function(data){
+      $('#search-result').html(data);
+      });
+    }
+    else {
+      $('#search-result').html('');
+    }
+  });
 }

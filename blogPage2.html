@@ -44,18 +44,40 @@
 		<div id="blogContainer">
 			<div class="blogPost">
 			<div id="blogHeading">
-				<h1>Lorem ipsum</h1>
-				<h2>17.3.2015</h2>
+				<h1>
+					<?php 
+						include 'connect.php';
+						$upit = 'SELECT title FROM post WHERE id = 2';
+						$rez = mysql_query($upit, $k);
+						while ($r = mysql_fetch_array($rez)) {
+							echo $r['title'];
+						}
+					 ?>
+				</h1>
+				<h2>
+					<?php 
+						include 'connect.php';
+						$upit = 'SELECT date FROM post WHERE id = 2';
+						$rez = mysql_query($upit, $k);
+						while ($r = mysql_fetch_array($rez)) {
+							echo $r['date'];
+						}
+					 ?>
+				</h2>
 			</div>
 			<div id="blogPhoto">
 				<img src="img/photo8.jpg" alt="blogDestination" />
 			</div>
 			<div class="blogText-blog">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet nisi et est faucibus aliquet sed eu nisi. Mauris vehicula nisl sed erat mollis tempor. Sed a cursus neque. Pellentesque mollis blandit augue quis imperdiet. In facilisis enim non metus dapibus, vitae condimentum mauris pharetra. In hac habitasse platea dictumst. Nam vel neque tempor, tempus risus at, euismod nulla.<br><br>
-
-				Mauris nunc erat, venenatis sit amet ultrices quis, porttitor a nisi. Vivamus elementum sapien non facilisis luctus. Cras non tincidunt sem. Aenean dignissim purus ac vulputate aliquam. Sed eget finibus ipsum, non interdum tortor. Morbi auctor pretium porttitor. Aenean interdum iaculis sem eu ullamcorper. Ut vulputate fringilla rutrum. Fusce mollis tincidunt est, et feugiat nisi condimentum dignissim. Duis vestibulum est ut gravida convallis. Vivamus nec pulvinar nisl. Fusce eu mi venenatis, tempor justo a, semper nibh. Vestibulum consectetur, dolor vitae iaculis malesuada, orci purus faucibus est, sit amet tincidunt lectus ex ut ante.<br><br>
-
-				Praesent vel fringilla justo. Vivamus dapibus, neque quis efficitur mollis, massa purus dictum purus, ut placerat orci lectus ut erat. Praesent id cursus velit, ut dignissim nulla. Ut porta pretium sagittis. Maecenas et risus tempus, ultricies velit quis, auctor augue. Sed suscipit blandit massa, in efficitur mi sagittis vel. Ut non sollicitudin ipsum. Nulla venenatis ante a ex posuere, eu tincidunt felis consequat. Sed vitae mauris laoreet, vehicula risus et, placerat mauris.</p>
+				<p><?php 
+						include 'connect.php';
+						$upit = 'SELECT body FROM post WHERE id = 2';
+						$rez = mysql_query($upit, $k);
+						while ($r = mysql_fetch_array($rez)) {
+							echo $r['body'];
+						}
+					 ?>
+				</p>
 	<div class="blogButton">
 		<a href="destinations.html"><input type="button" class="blogBtn" name="blogBtn" value="go back"></a>
 	</div>
