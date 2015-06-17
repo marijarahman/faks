@@ -17,12 +17,14 @@ include 'connect.php';
 		else {
 			$korisnik = mysql_fetch_array($rez);
 			$kor_ime = $korisnik['korisnicko_ime'];
-			$ime_prezime = $korisnik['ime_prezime'];
 			$lozinka = $korisnik['lozinka'];
 			$id_uloga = $korisnik['id_uloga'];
 			$naziv_uloge = $korisnik['naziv_uloge'];
+			$id = $korisnik['id_korisnik'];
 			$_SESSION['idU'] = $id_uloga;
-			$_SESSION['korisnicko_ime'] = $korisnicko_ime;
+			$_SESSION['korisnicko_ime'] = $kor_ime;
+			$_SESSION['lozinka'] = $lozinka;
+			$_SESSION['id'] = $id;
 			setcookie($korisnicko_ime, $ime_prezime, time() + (86400*30), "/");
 			switch ($naziv_uloge) {
 				case 'admin':
@@ -30,7 +32,7 @@ include 'connect.php';
 					break;
 				
 				case 'student':
-					header("Location:member.php");
+					header("Location:profile.php?id=$id&kor_ime=$kor_ime");
 					break;
 			}
 		}
@@ -48,7 +50,7 @@ include 'connect.php';
 			$sql = "INSERT INTO korisnici VALUES('', '$user', '$pass', '$email')";
 			$r = mysql_query($sql);
 			if ($r) {
-				echo "Account created";
+				header("Location:profile.php?id=$id");
 			}
 			else {
 				$greske[] = "Account not created!";

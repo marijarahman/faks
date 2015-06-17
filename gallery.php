@@ -18,35 +18,21 @@
 	<body>
 		<?php include 'header.php'; ?>
 		<div id="containerGal">
-			<div class="overlay">
-				<div class="big-pic">
-					<img class="picture-big" src="dataPhoto" />
-					<p class="photo-title"></p>
-				</div>
-				<span class="close">X</span>
-			</div>
+
 			<h1>Gallery</h1>
 			<h2>Lorem ipsum dolor sit amet</h2>
 			
 			<div class="gallery">
+				<?php 
+					include 'connect.php';	
+					$upitSlike = "SELECT * FROM images";
+					$rezSlike = mysql_query($upitSlike, $k);
+					while ($row = mysql_fetch_array($rezSlike)) {											
+				?>
 				<div class="picture-container">
-					<img class="picture" src="img/photo7-copy.jpg" alt="nature" />
+					<img class="picture" src="<?php echo $row['href']; ?>" alt="nature" />
 				</div>
-				<div class="picture-container">
-					<img class="picture" src="img/photo7-copy.jpg" alt="nature2" />
-				</div>
-				<div class="picture-container">
-					<img class="picture" src="img/photo7-copy.jpg" alt="nature3" />
-				</div>
-				<div class="picture-container">
-					<img class="picture" src="img/photo7-copy.jpg" alt="nature4"/>
-				</div>
-				<div class="picture-container">
-					<img class="picture" src="img/photo7-copy.jpg" alt="nature5"/>
-				</div>
-				<div class="picture-container">
-					<img class="picture" src="img/photo7-copy.jpg" alt="nature6"/>
-				</div>
+				<?php } ?>
 			</div>
 		</div>
 		<?php include 'footer.php'; ?>

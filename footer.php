@@ -1,4 +1,15 @@
+<?php
+	include 'connect.php';
+	$upit = "SELECT id, question
+			FROM polls";
+	$rez = mysql_query($upit, $k);
+	while ($r = mysql_fetch_object($rez)) {
+			$polls[] = $r;
+			
+	}
 
+	
+?>
 <div id="footer">
 	<div class="left">
 		<ul class="navFooter">
@@ -22,7 +33,7 @@
 		</ul>
 	</div>
 	
-	<div class="left" id="followme">
+	<div class="left followme">
 		<h3>Follow me!</h3><br>
 		<div class="social">
 			<i class="fa fa-facebook"></i>
@@ -30,6 +41,28 @@
 			<i class="fa fa-pinterest-p"></i>
 			<i class="fa fa-instagram"></i>
 		</div>
+	</div>
+	<div class="left followme">
+		<?php
+			if (!empty($polls)):
+			
+		?>
+		<ul class="navFooter">
+			
+			<?php foreach ($polls as $p) : ?>
+				<li>Today's poll:
+					<a href="poll.php?p=<?php echo $p->id; ?>" class="poll-link">
+					<?php echo $p->question ?>
+					</a>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+		<?php
+			else:
+		?>
+		<p>Sorry no polls available</p>
+		<?php endif; ?>
+		
 	</div>
 	<div class="clear"></div>
 	

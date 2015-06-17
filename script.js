@@ -235,7 +235,7 @@ function reset() {
 
 function getResult(value) {
 
-  $('#search').on('blur', function(){
+  $('#search').on('change', function(){
     var search = $('#search').val();
     if ($.trim(search) != '') {
       $.post('ajax/search.php', {search: value}, function(data){

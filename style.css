@@ -262,6 +262,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .left {
   float: left;
+  width: 25%;
 }
 
 .right {
@@ -413,16 +414,18 @@ blockquote:before {
   padding: 5px 25px;
   margin: 10px 0px; 
   color: #fff;
+   background-color: #00B16A;
   border: 3px solid #00B16A;
  font-family: 'Raleway', sans-serif;}
 
 .btn1:hover{
-  background-color: #00B16A;
-  color: #fff;
+  background-color: #fff;
+  color: #00B16A;
   -webkit-transition: 200ms ease-in;
   -moz-transition: 200ms ease-in;
   -o-transition: 200ms ease-in;
   transition: 200ms ease-in; 
+  cursor: pointer;
  }
 
  .heading {
@@ -476,7 +479,7 @@ blockquote:before {
   padding: 4px !important;
 }
 
-#followme h3{
+.followme h3{
   padding: 25px 25px 10px 25px;
   font-family: 'Raleway', sans-serif !important;
   color:#ffce54 !important;
@@ -861,4 +864,69 @@ p {
   padding: 15px;
   line-height: 1.5em;
   color: #434a54;
+}
+
+.poll { 
+  padding: 50px;
+  width: 90%;
+  margin: 0 auto;
+  color: #434a54;
+  font-family: 'Raleway', sans-serif;
+}
+
+.poll-question {
+  font-size: 1.7em;
+}
+.poll-option {
+  padding: 10px;
+}
+.current {
+  font-size: 1.5em;
+}
+
+.current__results {
+  list-style-type: none;
+}
+.current__results li {
+  padding: 10px;
+  color: #00B16A;
+}
+
+.page-heading {
+  font-size: 2.0625em;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  color: #ffce54;
+}
+
+.list_of_users {
+  font-family: 'Raleway', sans-serif;
+  list-style: none;
+  width: 500px;
+}
+.user {
+  width: 50%;
+}
+
+.success {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  color: #434a54;
+}
+
+.pagination {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.pagination a {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  padding: 10px;
+  color: #00B16A;
+}
+
+.selected {
+  color: #434a54 !important;
 }
