@@ -930,3 +930,16 @@ p {
 .selected {
   color: #434a54 !important;
 }
+
+.comments {
+  list-style-type: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+.comments-item {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+a { text-decoration: none !important; }
